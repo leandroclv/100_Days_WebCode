@@ -13,13 +13,18 @@
     .container {
       color: white;
       border: 5px solid gold;
-      display: flex;
+      display: inline-flex;
+      flex-direction: column;
     }
 
     /*
 Select all the elements that are the direct
 children of the .container class.
     */
+
+    .container > * {/* usar o asterisco, pois são todos os filhos (div com cores) do pai (div conteiner). Seu eu tivesse deixado o div e algum neto do pai fosse uma div, o neto teria sido pegue*/
+      flex-basis: 100px;
+    }
 
     .red {background-color: #eb4d4b;}
     .orange {background-color: #f0932b;}
